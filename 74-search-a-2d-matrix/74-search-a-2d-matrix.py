@@ -6,9 +6,9 @@ class Solution:
         
         while top<=bot:
             mrow= (top+bot)//2
-            if target> matrix[mrow][-1] :
+            if target > matrix[mrow][-1] : #if target value is greater than the rightmost element i.e. the greatest element then you have to shift top row as values keep increasing downwards 
                 top =mrow+1
-            elif target < matrix[mrow][0]:
+            elif target < matrix[mrow][0]: #if target value is less than the leftmost mid row value then we need to move up i.e. shift our bottom pointer upwards
                 bot=mrow -1
             else:
                 break
