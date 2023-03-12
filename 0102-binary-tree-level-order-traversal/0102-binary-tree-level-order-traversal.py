@@ -17,16 +17,16 @@ class Solution:
 
         # While the queue is not empty, repeat steps 4-7
         while queue:
-            # Get the size of the queue and initialize an empty list to store the nodes of the current level
+        # Get the size of the queue and initialize an empty list to store the nodes of the current level
             size = len(queue)
             level = []
 
-            # Loop through the elements of the current level and add them to the list
+        # Loop through the elements of the current level and add them to the list
             for i in range(size):
                 node = queue.pop(0)
                 level.append(node.val)
 
-                # For each element of the current level, add its children to the queue
+        # For each element of the current level, add its children to the queue
                 if node.left:
                     queue.append(node.left)
                 if node.right:
